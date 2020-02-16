@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Task.Domain.Entities.Review>
+
+    @{
+        ViewBag.Title = "ShowReviews";
+        Layout = null;
+    }
+
+    <style>
+
+        .card {
+            min-width: 100%;
+            min-height: 0;
+        }
+
+        .container {
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+    </style>
+
+
+    @foreach (Task.Domain.Entities.Review st in Model)
+    {
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="~/Content/Images/DefaultProfile.png" class="img img-rounded img-fluid" />
+                        </div>
+                        <div class="col-md-10">
+                            <h4>@st.Name</h4>
+                            <div class="clearfix"></div>
+                            <p>@st.Text</p>
+                            <div class="float-right align-bottom:0">
+                                <p>@st.Data</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }

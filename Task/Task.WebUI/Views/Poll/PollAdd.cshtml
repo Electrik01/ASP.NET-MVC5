@@ -1,0 +1,22 @@
+﻿@{ 
+
+}
+
+<style>
+    .progress{
+        height:30px;
+        margin:5px;
+    }
+</style>
+
+<div class="card">
+    @foreach (int num in ViewBag.List)
+    {
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                 aria-valuemin="0" aria-valuemax="100" style="width:@num%">
+                @num%
+            </div>
+        </div>
+    }
+</div>

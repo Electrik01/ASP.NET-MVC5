@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Test";
+}
+<style>
+    .card{
+        min-width: 100%;
+        margin-bottom:10px;
+        min-height: 0;
+        
+    }
+ 
+</style>
+
+
+
+@using (Html.BeginForm("Test", "Home", FormMethod.Post))
+{
+
+
+    <div class="card">
+        <div class="card-header">
+            <h3>Sun rise in the:</h3>
+        </div>
+        <div class="card-body">
+            @Html.RadioButton("sun", "West", true)
+            <span>West</span> <br />
+            @Html.RadioButton("sun", "East")
+            <span>East</span> <br />
+            @Html.RadioButton("sun", "South")
+            <span>South</span> <br />
+            @Html.RadioButton("sun", "North")
+            <span>North</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>Which is less than 123:</h3>
+        </div>
+        <div class="card-body">
+            @Html.CheckBox("chb1", false)
+            <span>45</span> <br />
+            @Html.CheckBox("chb2", false)
+            <span>124</span> <br />
+            @Html.CheckBox("chb3", false)
+            <span>2</span> <br />
+            @Html.CheckBox("chb4", false)
+            <span>543</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>How much is 2+2</h3>
+        </div>
+        <div class="card-body">
+            @Html.RadioButton("sum", "3", true)
+            <span>3</span> <br />
+            @Html.RadioButton("sum", "5")
+            <span>5</span> <br />
+            @Html.RadioButton("sum", "4")
+            <span>4</span> <br />
+            @Html.RadioButton("sum", "0")
+            <span>0</span>
+        </div>
+    </div>
+
+    <input type="submit" class="btn btn-primary float-right" value="Result" />
+
+}

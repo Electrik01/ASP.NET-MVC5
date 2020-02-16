@@ -1,0 +1,38 @@
+﻿@model Task.Domain.Pagination.IndexViewModel
+@using Task.WebUI.Helpers;
+@{
+    ViewBag.Title = "Home";
+}
+
+<link href="~/Content/Article/Articles.css" rel="stylesheet" />
+
+
+@foreach (Task.Domain.Entities.Article st in Model.Articles)
+{
+
+    <div class="card text-justify">
+        <form action="/Home/Index" method="post">
+            <div class="card-header">
+                <img class="card-img-top" src="~/Content/Images/NoImage.png" alt="...">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">@st.Name</h5>
+                <h6 class="card-subtitle mb-2 text-muted">@st.Data.ToString("dd.MM.yyyy")</h6>
+                <p class="card-text">@(st.Text.Substring(0, 200) + "...")</p>
+                <input type="hidden" name="Name" value="@st.Name" />
+                <input type="submit" class="btn btn-primary float-right" value="Continue">
+            </div>
+
+        </form>
+    </div>
+}
+
+    <br />
+    <div class="btn-group">
+        @Html.PageLinks(Model.PageInfo, x => Url.Action("Index", new { page = x }))
+    </div>
+
+@section Roll
+    {
+    @Html.Partial("~/Views/Poll/PollView.cshtml")
+}

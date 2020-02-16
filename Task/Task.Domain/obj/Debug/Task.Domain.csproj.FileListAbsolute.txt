@@ -1,0 +1,11 @@
+C:\Users\vladp\source\repos\Task\Task.Domain\bin\Debug\Task.Domain.dll.config
+C:\Users\vladp\source\repos\Task\Task.Domain\bin\Debug\Task.Domain.dll
+C:\Users\vladp\source\repos\Task\Task.Domain\bin\Debug\Task.Domain.pdb
+C:\Users\vladp\source\repos\Task\Task.Domain\bin\Debug\EntityFramework.dll
+C:\Users\vladp\source\repos\Task\Task.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\vladp\source\repos\Task\Task.Domain\bin\Debug\EntityFramework.xml
+C:\Users\vladp\source\repos\Task\Task.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vladp\source\repos\Task\Task.Domain\obj\Debug\Task.Domain.csproj.CoreCompileInputs.cache
+C:\Users\vladp\source\repos\Task\Task.Domain\obj\Debug\Task.Domain.csproj.CopyComplete
+C:\Users\vladp\source\repos\Task\Task.Domain\obj\Debug\Task.Domain.dll
+C:\Users\vladp\source\repos\Task\Task.Domain\obj\Debug\Task.Domain.pdb

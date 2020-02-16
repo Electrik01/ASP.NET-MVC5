@@ -1,0 +1,32 @@
+﻿@model Task.WebUI.Models.ArtAbout
+@{
+    ViewBag.Title = "ArtAbout";
+}
+<style>
+    .card {
+        min-width: 100%;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header text-center">
+            <h2>@Model.Article.Name</h2>
+        </div>
+        <div class="card-body">
+
+            <p>@Model.Article.Text</p>
+
+        </div>
+        <div class="card-header">
+            @foreach(string tag in Model.Tags)
+            {
+                @Html.ActionLink(tag, "Index",new { tag=tag},new { @class = "btn btn-dark" })
+            }
+        </div>
+    </div>
+
+
+</div>
+
+
