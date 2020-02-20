@@ -12,9 +12,8 @@ namespace Task.Domain.Entities
         public string Name { get; set; }
         public string Text { get; set; }
         public DateTime Data { get; set; }
-        public string Tags { get; set; }
-
-
-        public IEnumerable<Review> Reviews { get; set; }
+        public bool IsShow { get; set; }
+        public bool IsDel { get; set; }
+        public virtual ICollection<Tag> Tags { get; set; }
     }
 }

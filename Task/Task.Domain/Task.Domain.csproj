@@ -54,16 +54,48 @@
     <Compile Include="Entities\Article.cs" />
     <Compile Include="Entities\Poll.cs" />
     <Compile Include="Entities\Review.cs" />
-    <Compile Include="Pagination\IndexViewModel.cs" />
+    <Compile Include="Entities\Tag.cs" />
+    <Compile Include="Migrations\202002181307196_InitialCreate.cs" />
+    <Compile Include="Migrations\202002181307196_InitialCreate.designer.cs">
+      <DependentUpon>202002181307196_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002181311252_MDB.cs" />
+    <Compile Include="Migrations\202002181311252_MDB.designer.cs">
+      <DependentUpon>202002181311252_MDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002181312529_MDB1.cs" />
+    <Compile Include="Migrations\202002181312529_MDB1.designer.cs">
+      <DependentUpon>202002181312529_MDB1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002192025454_MDB2.cs" />
+    <Compile Include="Migrations\202002192025454_MDB2.designer.cs">
+      <DependentUpon>202002192025454_MDB2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Pagination\PageInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\ArtRevRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\SiteContext.cs" />
+    <Compile Include="Repository\SiteContextInitializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202002181307196_InitialCreate.resx">
+      <DependentUpon>202002181307196_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002181311252_MDB.resx">
+      <DependentUpon>202002181311252_MDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002181312529_MDB1.resx">
+      <DependentUpon>202002181312529_MDB1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002192025454_MDB2.resx">
+      <DependentUpon>202002192025454_MDB2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

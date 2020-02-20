@@ -30,6 +30,8 @@ namespace Task.WebUI.Controllers
         [HttpPost]
         public ActionResult AddReview(Review review)
         {
+            Tag tag = repo.Tags().FirstOrDefault();
+            ViewBag.Tag = tag;
             if (ModelState.IsValid)
             {
                 review.Data = DateTime.Now;

@@ -1,0 +1,16 @@
+C:\Users\vladp\source\repos\Task\Task.Domain\bin\Release\Task.Domain.dll.config
+C:\Users\vladp\source\repos\Task\Task.Domain\bin\Release\Task.Domain.dll
+C:\Users\vladp\source\repos\Task\Task.Domain\bin\Release\Task.Domain.pdb
+C:\Users\vladp\source\repos\Task\Task.Domain\bin\Release\EntityFramework.dll
+C:\Users\vladp\source\repos\Task\Task.Domain\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\vladp\source\repos\Task\Task.Domain\bin\Release\EntityFramework.xml
+C:\Users\vladp\source\repos\Task\Task.Domain\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\vladp\source\repos\Task\Task.Domain\obj\Release\Task.Domain.csprojAssemblyReference.cache
+C:\Users\vladp\source\repos\Task\Task.Domain\obj\Release\Task.Domain.Migrations.InitialCreate.resources
+C:\Users\vladp\source\repos\Task\Task.Domain\obj\Release\Task.Domain.Migrations.MDB.resources
+C:\Users\vladp\source\repos\Task\Task.Domain\obj\Release\Task.Domain.Migrations.MDB1.resources
+C:\Users\vladp\source\repos\Task\Task.Domain\obj\Release\Task.Domain.csproj.GenerateResource.cache
+C:\Users\vladp\source\repos\Task\Task.Domain\obj\Release\Task.Domain.csproj.CoreCompileInputs.cache
+C:\Users\vladp\source\repos\Task\Task.Domain\obj\Release\Task.Domain.csproj.CopyComplete
+C:\Users\vladp\source\repos\Task\Task.Domain\obj\Release\Task.Domain.dll
+C:\Users\vladp\source\repos\Task\Task.Domain\obj\Release\Task.Domain.pdb

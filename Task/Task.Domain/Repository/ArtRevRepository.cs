@@ -11,6 +11,10 @@ namespace Task.Domain.Repository
     {
         private SiteContext db = new SiteContext();
 
+        public void Del(Article article)
+        {
+            db.Articles.Remove(article);
+        }
         public IEnumerable<Review> Reviews()
         {
             return db.Reviews;
@@ -21,11 +25,21 @@ namespace Task.Domain.Repository
             return db.Articles;
         }
 
+        public IEnumerable<Tag> Tags()
+        {
+            return db.Tags;
+        }
+
         public IEnumerable<Poll> Polls()
         {
             return db.Polls;
         }
 
+        public void Edit(Article article)
+        {
+            db.Entry(article).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+        }
         public void Save(Review r)
         {
             db.Reviews.Add(r);
@@ -34,6 +48,23 @@ namespace Task.Domain.Repository
         public void Save(Poll r)
         {
             db.Polls.Add(r);
+            db.SaveChanges();
+        }
+
+        public void SaveChanges()
+        {
+            db.SaveChanges();
+        }
+
+        public void Save(Article r)
+        {
+            db.Articles.Add(r);
+            db.SaveChanges();
+        }
+
+        public void Save(Tag r)
+        {
+            db.Tags.Add(r);
             db.SaveChanges();
         }
 

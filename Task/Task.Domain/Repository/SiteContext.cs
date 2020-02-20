@@ -13,5 +13,6 @@ namespace Task.Domain.Repository
         public DbSet<Article> Articles { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Poll> Polls { get; set; }
+        public DbSet<Tag> Tags { get; set; }
     }
 }

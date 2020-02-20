@@ -9,7 +9,12 @@ namespace Task.WebUI.Models
     public class ArtAbout
     {
         public Article Article { get; set; }
-        public string[] Tags { get; set; }
-        public ArtAbout(Article a, string[] t) { Article = a; Tags = t; }
+        public IEnumerable<Tag> Tags { get; set; }
+
+        public ArtAbout(Article articles)
+        {
+            Article = articles;
+            Tags = articles.Tags;
+        }   
     }
 }

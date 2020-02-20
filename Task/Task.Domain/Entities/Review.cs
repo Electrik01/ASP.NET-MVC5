@@ -18,6 +18,5 @@ namespace Task.Domain.Entities
         public string Text { get; set; }
         public DateTime Data { get; set; }
 
-        public Article Article { get; set; }
     }
 }

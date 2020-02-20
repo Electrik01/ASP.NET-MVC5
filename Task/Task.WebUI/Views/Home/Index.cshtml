@@ -1,4 +1,4 @@
-﻿@model Task.Domain.Pagination.IndexViewModel
+﻿@model Task.WebUI.Models.ArtShort
 @using Task.WebUI.Helpers;
 @{
     ViewBag.Title = "Home";
@@ -18,7 +18,7 @@
             <div class="card-body">
                 <h5 class="card-title">@st.Name</h5>
                 <h6 class="card-subtitle mb-2 text-muted">@st.Data.ToString("dd.MM.yyyy")</h6>
-                <p class="card-text">@(st.Text.Substring(0, 200) + "...")</p>
+                <p class="card-text">@(st.Text + "...")</p>
                 <input type="hidden" name="Name" value="@st.Name" />
                 <input type="submit" class="btn btn-primary float-right" value="Continue">
             </div>
@@ -27,12 +27,24 @@
     </div>
 }
 
-    <br />
-    <div class="btn-group">
-        @Html.PageLinks(Model.PageInfo, x => Url.Action("Index", new { page = x }))
+<br />
+
+<div class="row">
+    <div class="col-10">
+        <div class="btn-group">
+            @Html.PageLinks(Model.PageInfo, x => Url.Action("Index", new { page = x }))
+        </div>
     </div>
+    <div class="col-2">
+        @Html.ActionLink("Add", "Add", "ArtAdd", null, new { @class = "btn btn-dark float-right" })
+    </div>
+</div>
+
+
+
 
 @section Roll
     {
     @Html.Partial("~/Views/Poll/PollView.cshtml")
+
 }

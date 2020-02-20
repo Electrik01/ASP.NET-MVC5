@@ -19,9 +19,9 @@
 
         </div>
         <div class="card-header">
-            @foreach(string tag in Model.Tags)
+            @foreach(Task.Domain.Entities.Tag tag in Model.Tags)
             {
-                @Html.ActionLink(tag, "Index",new { tag=tag},new { @class = "btn btn-dark" })
+                @Html.ActionLink(tag.Name, "Index",new { tag_id=tag.Id},new { @class = "btn btn-dark" })
             }
         </div>
     </div>

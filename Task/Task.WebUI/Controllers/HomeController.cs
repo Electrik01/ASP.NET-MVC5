@@ -19,13 +19,14 @@ namespace Task.WebUI.Controllers
             repo = r;
         }
         [HttpGet]
-        public ActionResult Index(string tag = "", int page = 1)
+        public ActionResult Index(int tag_id = 1, int page = 1)
         {
-            int pageSize = 4;
-            IEnumerable<Article> articlesPerPages = repo.Articles().Skip((page - 1) * pageSize).Where(a => a.Tags.Contains(tag)).Take(pageSize);
-            PageInfo pageInfo = new PageInfo { PageNumber = page, PageSize = pageSize, TotalItems = repo.Articles().Where(a => a.Tags.Contains(tag)).Count() };
-            IndexViewModel ivm = new IndexViewModel { PageInfo = pageInfo, Articles = articlesPerPages };
-            return View(ivm);
+            ArtShort artShort = new ArtShort(repo.Tags()
+                                            .Where(t=>t.Id==tag_id)
+                                            .FirstOrDefault()
+                                            .Articles
+                                            .Where(a=>a.IsShow==true && a.IsDel==false),page);
+            return View(artShort);
         }
 
         [HttpPost]
@@ -34,7 +35,7 @@ namespace Task.WebUI.Controllers
 
             Article article = repo.Articles().Where(a => a.Name == Name)
                             .FirstOrDefault();
-            ArtAbout artAbout = new ArtAbout(article, article.Tags.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+            ArtAbout artAbout = new ArtAbout(article);
             return View("ArtAbout", artAbout);
         }
 
